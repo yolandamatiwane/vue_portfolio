@@ -1,13 +1,25 @@
 <template>
-    <div>
+    <footer>
+    <p>
+        Yolanda Matiwane &copy; {{ displayYear }}
+    </p> 
+    </footer>
         
-    </div>
 </template>
 <script>
 export default {
-    
+    data(){
+    return {
+      currentYear: new Date()
+    }
+  },
+  computed:{
+    displayYear(){
+      return this.currentYear.getFullYear()
+      }
+    }
 }
 </script>
-<style>
+<style scoped>
     
 </style>

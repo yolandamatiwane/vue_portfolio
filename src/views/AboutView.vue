@@ -8,12 +8,13 @@
         <div class="row">
           <div class="col-sm-8 lg-12">
             <h5 class="card-text">
-              Hello! I'm Yolanda Matiwane, an aspiring developer with a passion for creating and problem-solving. Originally from Langa, I graduated from high school in 2018 and have since embarked on an exciting journey into the world of coding.
+              Hey there, I'm <span>Yolanda Matiwane</span>, and I'm passionate about <span>creating and problem-solving</span>. Originally from <span>Langa</span>, I graduated from high school in 2018 and have since embarked on an exhilarating journey into the world of <span>coding</span>.
               <br>
-              Since my introduction to coding in 2020 through visual Python in a physics class, I've been captivated by the process of turning code into tangible creations. This initial experience sparked my fascination with understanding how things work and the thrill of seeing ideas materialize into visualizations or functional applications.
-              While I'm still in the early stages of my coding career, I'm eager to expand my skills and knowledge. I enjoy tackling challenges and am constantly exploring new concepts to enhance my understanding of programming.
-              I thrive on learning new things and applying my creativity to problem-solving. Beyond coding, I indulge in reading, watching movies, and gaming, activities that fuel my imagination and inspire my work.
-              My goal is to continue growing as a developer, translating my ideas into impactful projects. I'm excited about the possibilities that coding offers and look forward to contributing to innovative solutions in the tech industry.
+              My fascination with coding began in <span>2020</span> when I encountered <span>visual Python</span> in a physics class. Witnessing how <span>code can transform into tangible creations</span> sparked my curiosity for <span>understanding how things work</span> and the <span>excitement of bringing ideas to life</span> through <span>visualizations</span> and <span>functional applications</span> .
+              <br>
+              While I'm still in the <span>early stages of my coding career</span>, I'm driven by a desire to <span>expand my skills and knowledge</span>. I thrive on <span>tackling challenges</span> and continuously <span>explore new concepts</span> to deepen my understanding of <span>programming</span>. Beyond coding, I find inspiration in <span>reading, movies, and gaming</span>, activities that fuel my <span>creativity</span> and enrich my <span>perspective</span>.
+              <br>
+              My goal is to <span>evolve as a developer</span>, transforming my ideas into <span>impactful projects</span>. I'm enthusiastic about the <span>endless possibilities that coding offers</span> and eagerly anticipate contributing to <span>innovative solutions</span> within the <span>tech industry</span>.
             </h5>
             <h6>For more? please feel free to contact me</h6>
           </div>
@@ -41,11 +42,12 @@ export default {
     border-radius:50%;
     /* margin-left:600px; */
     box-shadow:10px 10px 5px black;
+    border: 4px solid rgba(153, 116, 150, 0.3);
   }
   .col-sm-8 {
     box-shadow:10px 10px 5px black;
-    /* background-image:url('https://yolandamatiwane.github.io/vueProjectImages/168f0adf88b26e7c025e3db7b93607a2.png');
-    background-size:cover; */
+    background-color: rgba(153, 116, 150, 0.3);
+    border-radius: 10px;
   }
   #mainAboutDiv {
     margin: 60px;
@@ -64,9 +66,13 @@ export default {
     width:90%;
     border:none;
     margin-top:20px;
-    /* text-shadow: 2px 2px 4px white; */
+    text-shadow: 2px 2px 4px rgb(163, 163, 163);
     /* margin-left:90px; */
-    /* box-shadow:10px 10px 5px; */
+    
+  }
+  span{
+    color: #a01684;
+    font-size: 20px;
   }
   /* Responsiveness */
   @media only screen and (max-width: 768px) {

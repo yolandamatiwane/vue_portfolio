@@ -132,7 +132,7 @@ export default {
     display: flex;
     justify-content: space-between;
     margin-left: 30px;
-    margin-top: 120px;
+    margin-top: 60px;
     height: 600px;
     width: 95%;
     color: rgba(20, 0, 109, 0.705);
@@ -141,14 +141,31 @@ export default {
     box-shadow: 10px 15px 5px;
     border: none;
   }
-  /* for tablet screens */
-  @media only screen and (max-width:768px){
+  @media only screen and (max-width:1400px){
+    #overlapImg{
+      display: none;
+    }
+  }
+  @media only screen and (max-width:1150px){
+    #under{
+      position: relative;
+      width: 900px;
+      margin-left: 30px;
+    }
     #home{
-      flex-direction: column;
       margin-top:60px;
+      flex-direction: column;
       height: auto;
       padding: 20px;
     }
+    #image{
+      width: 100%;
+      height: auto;
+    }
+  }
+  /* for tablet screens */
+  @media only screen and (max-width:768px){
+    
     #homeText{
       margin-top: 0;
     }
@@ -156,19 +173,6 @@ export default {
       margin-top: 20px;
       width: 100%;
       height: auto;
-    }
-    #under{
-      position: relative;
-      top: 0;
-      right: 0;
-      width: 100%;
-      margin-top: 0;
-      margin-right: 0;
-    }
-    #overlapImg{
-      width: 100%;
-      height: auto;
-      margin-left: 0;
     }
     .btn-outline-custom, .btn-outline-light {
       margin-left: 10px;
@@ -202,8 +206,5 @@ export default {
       font-size: 16px;
     }
   }
-
-
-
 
 </style>

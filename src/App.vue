@@ -36,12 +36,19 @@ export default{
   text-align: center;
   color: #2c3e50;
 }
+@media (max-width:970px){
+  #nav li{
+    padding: 0px;
+  }
+}
 
+nav li{
+  padding: 30px;
+}
 nav a {
   font-weight: bold;
   color: rgb(2, 2, 94);
   text-decoration: none;
-  padding: 30px;
   font-weight: 900;
 }
 .nav-item{
@@ -60,12 +67,29 @@ body{
 }
 footer{
   height: 40px;
-  position: fixed;
+  
   color:rgb(0, 0, 42); 
   font-weight: 900;
   font-size: 18px;
   bottom: 0;
   width: 100%;
 
+}
+@media only screen and (max-width:768px) {
+  h1{
+    font-size: 60px;
+  }
+  h2{
+    font-size: 40px;
+  }
+  h3{
+    font-size: 30px;
+  }
+  h4{
+    font-size: 20px;
+  }
+  h6{
+    font-size: 20px;
+  }
 }
 </style>

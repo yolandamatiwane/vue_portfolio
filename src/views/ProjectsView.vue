@@ -13,15 +13,19 @@
       
     </select>
     <div id="about">
+      <spinner-comp/>
       <div class="card" v-for="project in filterProjects" :key="project.name">
-        <h3><span>></span> {{ project.name }}:</h3>
-        <img data-aos="zoom-in" data-aos-duration="1500" v-if="project.visuals.type === 'image'" :src="project.visuals.url">
-        <video v-else :src="project.visuals.url" type="video/mp4" controls>
-        </video>
-        <p>{{ project.description }}</p>
-        <div id="bnts">
-          <a :href="project.gitHub" target="_blank" class="btn btn-outline-custom">GitHub</a>
-          <a :href="project.vercel" target="_blank" class="btn btn-outline-custom">Live Demo</a>
+        <spinner-comp v-if="!projectLoaded(project)"/>
+        <div v-else>
+          <h3><span>></span> {{ project.name }}:</h3>
+          <img data-aos="zoom-in" data-aos-duration="1500" v-if="project.visuals.type === 'image'" :src="project.visuals.url">
+          <video v-else :src="project.visuals.url" type="video/mp4" controls>
+          </video>
+          <p>{{ project.description }}</p>
+          <div id="bnts">
+            <a :href="project.gitHub" target="_blank" class="btn btn-outline-custom">GitHub</a>
+            <a :href="project.vercel" target="_blank" class="btn btn-outline-custom">Live Demo</a>
+          </div>
         </div>
         
           
@@ -30,7 +34,11 @@
       
   </template>
   <script>
+  import SpinnerComp from '/src/components/SpinnerComp.vue'
   export default {
+      components:{
+        SpinnerComp
+      },
       data(){
         return {
           selectedCategory:''
@@ -46,6 +54,11 @@
           }
         }
         
+      },
+      methods: {
+        projectLoaded(project) {
+          return project.loaded === true
+        }
       }
       
   }
@@ -71,6 +84,9 @@
       box-shadow: 10px 10px 5px #670652;
       margin-bottom: 20px;
     }
+    img:hover{
+      box-shadow: 10px 10px 5px rgb(253, 194, 243);
+    }
     #about {
       /* margin-top: 60px; */
       display: flex;
@@ -88,12 +104,14 @@
     .card{
       background-color: rgba(128, 0, 128, 0.0);
       width:40%;
+      
       margin-left:70px;
       margin-top:10px;
       margin-bottom:30px;
       border: none;
       font-weight:900;
     }
+
     .btn-outline-custom, .btn-outline-dark{
       margin-left:20px;
       height:60px;
@@ -125,5 +143,40 @@
       width:100%;
       justify-content: space-between;
       
+    }
+    @media only screen and (max-width:768px){
+      h1{
+        font-size: 60px;
+      }
+      .btn-outline-dark{
+        width:60%;
+        font-size:20px;
+      }
+      h3{
+        font-size: 40px;
+      }
+      #about{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+      }
+      .card{
+        width: fit-content;
+        margin: 5px;
+      }
+      @media only screen and (max-width:480px) {
+        .btn-outline-dark{
+          font-size: 10px;
+        }
+        
+        h3{
+          font-size: 20px;
+        }
+        p{
+          font-size: 15px;
+        }
+        img{
+          width: 100%;
+        }
+      }
     }
   </style>

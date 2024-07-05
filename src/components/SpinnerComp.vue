@@ -1,6 +1,6 @@
 <template>
     <div class="loading-overlay" v-if='isLoading'>
-        <img src='https://yolandamatiwane.github.io/vueProjectImages/wobble%20gif.gif' class='spinner'>
+        <img src='https://yolandamatiwane.github.io/vueProjectImages/spinners/Animation%20-%201720183217052.gif' class='spinner'>
     </div>
     <div class='content' v-if='!isLoading'>
 
@@ -40,14 +40,5 @@ export default {
     width:100px;
     height: 100px;
   }
-  .content{
-    height:100vh;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    /* background-image: url();
-    background-size: cover; */
-    color:pink;
-    font-size: 24px;
-  }
+  
 </style>

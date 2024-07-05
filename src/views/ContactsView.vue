@@ -44,7 +44,7 @@
             <label>location:</label><h6>Langa, Cape Town, 7455</h6>
             <h5>socials:</h5>
             <a href="https://github.com/yolandamatiwane" target="_blank"><img src="https://yolandamatiwane.github.io/vueProjectImages/icons/github.png"></a>
-            <a href="www.linkedin.com/in/yolanda-matiwane-73683a17b" target="_blank"><img src="https://yolandamatiwane.github.io/vueProjectImages/icons/linkedin%20(1).png"></a>
+            <a href="https://www.linkedin.com/in/yolanda-matiwane-73683a17b/" target="_blank"><img src="https://yolandamatiwane.github.io/vueProjectImages/icons/linkedin%20(1).png"></a>
           </div>
         </div>
       </div>

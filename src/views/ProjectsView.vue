@@ -15,8 +15,8 @@
     <div id="about">
       <spinner-comp/>
       <div class="card" v-for="project in filterProjects" :key="project.name">
-        <spinner-comp v-if="!projectLoaded(project)"/>
-        <div v-else>
+        <spinner-comp/>
+        <div >
           <h3><span>></span> {{ project.name }}:</h3>
           <img data-aos="zoom-in" data-aos-duration="1500" v-if="project.visuals.type === 'image'" :src="project.visuals.url">
           <video v-else :src="project.visuals.url" type="video/mp4" controls>
@@ -34,11 +34,11 @@
       
   </template>
   <script>
-  import SpinnerComp from '/src/components/SpinnerComp.vue'
+  // import SpinnerComp from '/src/components/SpinnerComp.vue'
   export default {
-      components:{
-        SpinnerComp
-      },
+      // components:{
+      //   SpinnerComp
+      // },
       data(){
         return {
           selectedCategory:''

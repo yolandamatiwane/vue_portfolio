@@ -21,5 +21,11 @@ export default {
 }
 </script>
 <style scoped>
-    
+  footer{
+    color: #bb7aad;
+    background-color: #36454f00;
+    bottom: 0;
+    position: relative;
+    margin: auto;
+  }
 </style>

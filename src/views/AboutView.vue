@@ -7,20 +7,51 @@
       <div class="container text-center">
         <div class="row">
           <div class="col-sm-8 lg-12">
-            <h5 class="card-text">
-              Hey there, I'm <span>Yolanda Matiwane</span>, and I'm passionate about <span>creating and problem-solving</span>. Originally from <span>Langa</span>, I graduated from high school in 2018 and have since embarked on an exhilarating journey into the world of <span>coding</span>.
+            <div class="card-text">
+              Hi, I'm Yolanda Matiwane. I graduated high school in 2018 and initially embarked on a journey at the University of Cape Town with aspirations of becoming an astrophysicist. It was during this time that I was first introduced to the world of programming, using VPython to create simulations of cosmic phenomena. This experience ignited a passion in me for coding and the incredible potential it holds.
               <br>
-              My fascination with coding began in <span>2020</span> when I encountered <span>visual Python</span> in a physics class. Witnessing how <span>code can transform into tangible creations</span> sparked my curiosity for <span>understanding how things work</span> and the <span>excitement of bringing ideas to life</span> through <span>visualizations</span> and <span>functional applications</span> .
               <br>
-              While I'm still in the <span>early stages of my coding career</span>, I'm driven by a desire to <span>expand my skills and knowledge</span>. I thrive on <span>tackling challenges</span> and continuously <span>explore new concepts</span> to deepen my understanding of <span>programming</span>. Beyond coding, I find inspiration in <span>reading, movies, and gaming</span>, activities that fuel my <span>creativity</span> and enrich my <span>perspective</span>.
+              Though my university journey was cut short due to financial constraints, I discovered a new path through coding bootcamps. These experiences have revealed a deep-seated enthusiasm for web development, allowing me to bring my creative ideas to life through code.
               <br>
-              My goal is to <span>evolve as a developer</span>, transforming my ideas into <span>impactful projects</span>. I'm enthusiastic about the <span>endless possibilities that coding offers</span> and eagerly anticipate contributing to <span>innovative solutions</span> within the <span>tech industry</span>.
-            </h5>
-            <h6>For more? please feel free to contact me</h6>
+              <br>
+              Today, I am dedicated to crafting engaging and functional websites, and I am continually inspired by the endless possibilities that coding offers.
+            </div>
+
           </div>
           <div class="col-sm-4 lg-12">
             <img src="https://yolandamatiwane.github.io/vueProjectImages/20240422_122336.jpg">
           </div>
+          <div id="skillDiv">
+                <div>
+                    <h4>Coding Skills</h4>
+                    <div v-for="skill in skillsData" :key="skill.name" >
+                        <h5>
+                            <span>></span> {{ skill.name }}
+                        </h5>  
+                    </div>
+                </div>
+                <div>
+                    <h4>Soft Skills</h4>
+                    <h5>
+                        <span>></span> Problem-Solving and Critical Thinking
+                    </h5>
+                    <h5>
+                        <span>></span> Adaptability
+                    </h5>
+                    <h5>
+                        <span>></span> Effective Communication
+                    </h5>
+                    <h5>
+                        <span>></span> Team Collaboration
+                    </h5>
+                    <h5>
+                        <span>></span> Time Management
+                    </h5>
+                    <h5>
+                        <span>></span> Networking
+                    </h5>
+                </div>
+            </div>
         </div>
       </div>
     </div>
@@ -31,41 +62,44 @@ export default {
     computed: {
       pageAboutData(){
         return this.$store.state.aboutMe
+      },
+      skillsData(){
+        return this.$store.state.skills
       }
     }
 }
 </script>
 <style scoped>
+
   img{
-    width:300px;
-    height:300px;
-    border-radius:50%;
+    width:250px;
+    height:250px;
+    border-radius:20%;
     /* margin-left:600px; */
-    box-shadow:10px 10px 5px black;
-    border: 4px solid rgba(153, 116, 150, 0.3);
+    box-shadow: 4px 4px 2px white;
+    /* border: 4px solid rgba(153, 116, 150, 0.3); */
   }
   .col-sm-8 {
-    box-shadow:10px 10px 5px black;
-    background-color: rgba(153, 116, 150, 0.3);
+    box-shadow: 4px 4px 2px white;
+    background-color: rgba(255, 255, 255, 0);
     border-radius: 10px;
   }
   #mainAboutDiv {
-    margin: 60px;
     font-family:"Bangers";
   }
   h1{
-    font-size: 100px;
+    font-size: 50px;
     color: #bb7aad;
     text-shadow: 2px 2px 4px #000000;
   }
   .card{
     /* color: white; */
-    padding:50px;
+    padding:10px;
     height:450px;
     background-color:rgb(204, 192, 255);
     width:90%;
     border:none;
-    margin-top:20px;
+    margin-top:0px;
     text-shadow: 2px 2px 4px rgb(163, 163, 163);
     /* margin-left:90px; */
     
@@ -73,6 +107,12 @@ export default {
   span{
     color: #a01684;
     font-size: 20px;
+  }
+  #skillDiv{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
   /* Responsiveness */
   @media only screen and (max-width: 768px) {

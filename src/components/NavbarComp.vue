@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg">   
     <div id="nav" class="container-fluid">
             <a class="navbar-brand" href="#">
-              <img class="logo" src="https://yolandamatiwane.github.io/vueProjectImages/icons/Beige%20Minimal%20Personal%20Make%20Up%20Artist%20Logo.png" id="logo">
+              <!-- <img class="logo" src="https://yolandamatiwane.github.io/vueProjectImages/icons/Beige%20Minimal%20Personal%20Make%20Up%20Artist%20Logo.png" id="logo"> -->
           </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon" ></span>
@@ -12,6 +12,7 @@
                 <li class="nav-item">
                   <router-link to="/" @mousemove="show('Home')" @mouseleave="hide()">
                     <span class="nav-label" id="media">Home</span>
+                    <!-- <i class="bi bi-house-door-fill"></i> -->
                       <img src="https://yolandamatiwane.github.io/vueProjectImages/icons/home%20(1).png">
                       <Transition name="fade" mode="out-in">
                         <span v-if="displayLabel && label==='Home'" class="nav-label">Home</span>
@@ -31,7 +32,7 @@
                   <router-link to="/resume" @mousemove="show('Resume')" @mouseleave="hide()"> 
                     <img src="https://yolandamatiwane.github.io/vueProjectImages/icons/profile.png">
                     <Transition name="fade" mode="out-in">
-                      <span v-if="displayLabel && label==='Resume'" class="nav-label">Resume</span>
+                      <span v-if="displayLabel && label==='Resume'" class="nav-label">Education</span>
                     </Transition>
                     <span class="nav-label" id="media">Resume</span>
                   </router-link>
@@ -45,7 +46,7 @@
                     <span class="nav-label" id="media">Projects</span>
                   </router-link>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <router-link to="/testimonials" @mousemove="show('Testimonials')" @mouseleave="hide()"> 
                     <img src="https://yolandamatiwane.github.io/vueProjectImages/icons/testimonial.png">
                     <Transition name="fade" mode="out-in">
@@ -53,7 +54,7 @@
                     </Transition>
                     <span class="nav-label" id="media">Testimonials</span>
                   </router-link>
-                </li>
+                </li> -->
                 <li class="nav-item">
                   <router-link to="/contacts" @mousemove="show('Contacts')" @mouseleave="hide()"> 
                     <img src="https://yolandamatiwane.github.io/vueProjectImages/icons/contact-me.png">
@@ -92,7 +93,7 @@ methods:{
 <style scoped>
 
 nav{
-  background-color: rgba(137, 43, 226, 0.044);
+  background-color: rgba(137, 43, 226, 0);
   display: flex;
   align-items: center;
 }

@@ -39,7 +39,7 @@
              </div>
           </div>
           <div class="col-sm-6 lg-12" id="dets">
-            <label>cell: </label><h6>071 312 4564</h6>
+            <label>cell: </label><h6>071 312 4555</h6>
             <label>email: </label><h6>mbalentle.matiwane21@gmail.com</h6>
             <label>location:</label><h6>Langa, Cape Town, 7455</h6>
             <h5>socials:</h5>

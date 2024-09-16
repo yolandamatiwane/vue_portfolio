@@ -55,13 +55,12 @@ export default {
     right:0;
     width:600px;
     margin-top:130px;
-    margin-right:70px;
   }
   #overlapImg{
     position:relative;
     z-index:1;
     width:900px;
-    height:600px;
+    height:500px;
     margin-left:20px;
   }
   .btn-outline-custom, .btn-outline-light{
@@ -105,12 +104,8 @@ export default {
     color: #e2d794;
   }
   #homeText{
-    margin-top: 100px;
+    margin-top: 50px;
   }
-  /* img{
-    width:800px;
-    height:500px;
-  } */
   h2,h4{
     font-family:"Bangers";
     /* font-weight:800; */
@@ -122,18 +117,14 @@ export default {
     color:white;
   }
   #image{
-    margin-top: 50px;
-    /* margin-left: 300px; */
-    /* width: 40%; */
-    /* height: 350px;
-    border-radius: 20%; */
+    margin-top: 30px;
   }
   #home{
     display: flex;
     justify-content: space-between;
     margin-left: 30px;
-    margin-top: 60px;
-    height: 600px;
+    margin-top: 30px;
+    height: 500px;
     width: 95%;
     color: rgba(20, 0, 109, 0.705);
     font-weight: 900;

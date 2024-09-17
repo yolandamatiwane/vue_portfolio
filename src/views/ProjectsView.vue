@@ -15,9 +15,10 @@
     <div id="about">
       <spinner-comp/>
       <div class="card" v-for="project in filterProjects" :key="project.name">
-        <spinner-comp/>
         <div >
-          <h3><span>></span> {{ project.name }}:</h3>
+          <h3>
+            <span class="typing-effect">{{ project.name }}</span><span class="cursor">_</span>
+          </h3>
           <img data-aos="zoom-in" data-aos-duration="1500" v-if="project.visuals.type === 'image'" :src="project.visuals.url">
           <video v-else :src="project.visuals.url" type="video/mp4" controls>
           </video>
@@ -76,6 +77,18 @@
       font-weight: 900;
       font-size:30px;
       margin-top:80px;
+      display: flex;
+      align-items: center;
+    }
+    .typing-effect{
+      border-right: 2px solid white;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 2s steps(20,end);
+    }
+    .cursor{
+      font-size:30px;
+      animation: blink-caret 0.75s step-end infinite;
     }
     img{
       width:80%;
@@ -143,6 +156,15 @@
       width:100%;
       justify-content: space-between;
       
+    }
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent; }
+      50% { border-color: white; }
     }
     @media only screen and (max-width:768px){
       h1{

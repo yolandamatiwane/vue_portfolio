@@ -8,19 +8,15 @@
         <div class="row">
           <div class="col-sm-8 lg-12">
             <div class="card-text">
-              Hi, I'm Yolanda Matiwane. I graduated high school in 2018 and initially embarked on a journey at the University of Cape Town with aspirations of becoming an astrophysicist. It was during this time that I was first introduced to the world of programming, using VPython to create simulations of cosmic phenomena. This experience ignited a passion in me for coding and the incredible potential it holds.
-              <br>
-              <br>
-              Though my university journey was cut short due to financial constraints, I discovered a new path through coding bootcamps. These experiences have revealed a deep-seated enthusiasm for web development, allowing me to bring my creative ideas to life through code.
-              <br>
-              <br>
-              Today, I am dedicated to crafting engaging and functional websites, and I am continually inspired by the endless possibilities that coding offers.
+              Hello! I'm Yolanda Matiwane, an aspiring developer with a passion for creating and problem-solving. Originally from Langa, I graduated from high school in 2018 and have since embarked on an exciting journey into the world of coding.
+              Since my introduction to coding in 2020 through visual Python in a physics class, I've been captivated by the process of turning code into tangible creations. This initial experience sparked my fascination with understanding how things work and the thrill of seeing ideas materialize into visualizations or functional applications. While I'm still in the early stages of my coding career, I'm eager to expand my skills and knowledge. I enjoy tackling challenges and am constantly exploring new concepts to enhance my understanding of programming. I thrive on learning new things and applying my creativity to problem-solving. Beyond coding, I indulge in reading, watching movies, and gaming, activities that fuel my imagination and inspire my work. My goal is to continue growing as a developer, translating my ideas into impactful projects. I'm excited about the possibilities that coding offers and look forward to contributing to innovative solutions in the tech industry.
             </div>
-
           </div>
           <div class="col-sm-4 lg-12">
             <img src="https://yolandamatiwane.github.io/vueProjectImages/20240422_122336.jpg">
           </div>
+          <br>
+          <h3><span class="cursor">></span>Skills</h3>
           <div id="skillDiv">
                 <div>
                     <h4>Coding Skills</h4>
@@ -114,6 +110,15 @@ export default {
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
+  .cursor{
+    font-size:30px;
+    animation: blink-caret 0.75s step-end infinite;
+  }
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+  }
+
   /* Responsiveness */
   @media only screen and (max-width: 768px) {
     /* Adjust layout for smaller screens */

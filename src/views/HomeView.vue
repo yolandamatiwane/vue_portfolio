@@ -54,7 +54,7 @@ export default {
     top:0;
     right:0;
     width:600px;
-    margin-top:130px;
+    margin-top:100px;
   }
   #overlapImg{
     position:relative;
@@ -90,19 +90,11 @@ export default {
   }
   h1{
     font-family:"Bangers";
-    font-size: 100px;
+    font-size: 70px;
     color: #670652;
     text-shadow: 2px 2px 4px #000000;
   } 
-  nav a {
-    font-weight: bold;
-    color: #670652;
-    text-decoration: none;
-    padding: 10px;
-  }
-  nav a.router-link-exact-active {
-    color: #e2d794;
-  }
+
   #homeText{
     margin-top: 50px;
   }
@@ -123,19 +115,14 @@ export default {
     display: flex;
     justify-content: space-between;
     margin-left: 30px;
-    margin-top: 30px;
+    margin-top: 0px;
     height: 500px;
     width: 95%;
     color: rgba(20, 0, 109, 0.705);
     font-weight: 900;
-    background-color: rgba(153, 116, 150, 0.3);
+    background-color: rgba(153, 116, 150, 0);
     box-shadow: 10px 15px 5px;
     border: none;
-  }
-  @media only screen and (max-width:1400px){
-    #overlapImg{
-      display: none;
-    }
   }
   @media only screen and (max-width:1150px){
     #under{

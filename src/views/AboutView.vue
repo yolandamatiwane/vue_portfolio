@@ -6,18 +6,18 @@
     <div class="card">
       <div class="container text-center">
         <div class="row">
+          <div class="col-sm-4 lg-12">
+            <img src="https://yolandamatiwane.github.io/vueProjectImages/20240422_122336.jpg">
+          </div>
           <div class="col-sm-8 lg-12">
             <div class="card-text">
               Hello! I'm Yolanda Matiwane, an aspiring developer with a passion for creating and problem-solving. Originally from Langa, I graduated from high school in 2018 and have since embarked on an exciting journey into the world of coding.
               Since my introduction to coding in 2020 through visual Python in a physics class, I've been captivated by the process of turning code into tangible creations. This initial experience sparked my fascination with understanding how things work and the thrill of seeing ideas materialize into visualizations or functional applications. While I'm still in the early stages of my coding career, I'm eager to expand my skills and knowledge. I enjoy tackling challenges and am constantly exploring new concepts to enhance my understanding of programming. I thrive on learning new things and applying my creativity to problem-solving. Beyond coding, I indulge in reading, watching movies, and gaming, activities that fuel my imagination and inspire my work. My goal is to continue growing as a developer, translating my ideas into impactful projects. I'm excited about the possibilities that coding offers and look forward to contributing to innovative solutions in the tech industry.
             </div>
           </div>
-          <div class="col-sm-4 lg-12">
-            <img src="https://yolandamatiwane.github.io/vueProjectImages/20240422_122336.jpg">
-          </div>
           <br>
-          <h3><span class="cursor">></span>Skills</h3>
           <div id="skillDiv">
+            <h3><span class="cursor">></span>Skills</h3>
                 <div>
                     <h4>Coding Skills</h4>
                     <div v-for="skill in skillsData" :key="skill.name" >
@@ -105,7 +105,7 @@ export default {
     font-size: 20px;
   }
   #skillDiv{
-    margin-top: 20px;
+    margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;

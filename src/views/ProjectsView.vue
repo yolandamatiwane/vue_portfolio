@@ -101,7 +101,6 @@
       box-shadow: 10px 10px 5px rgb(253, 194, 243);
     }
     #about {
-      /* margin-top: 60px; */
       display: flex;
       justify-content: center; /* Center align cards horizontally */
       flex-wrap: wrap;  /* Allow cards to wrap to the next line if space is insufficient */

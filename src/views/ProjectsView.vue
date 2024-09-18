@@ -110,7 +110,7 @@
       font-weight: 800;
     }
     p{
-      width: 80%;
+      width: 100%;
     }
     .card{
       background-color: rgba(128, 0, 128, 0.0);
@@ -166,11 +166,11 @@
     }
     @media only screen and (max-width:768px){
       h1{
-        font-size: 60px;
+        font-size: 40px;
       }
-      .btn-outline-dark{
-        width:60%;
-        font-size:20px;
+      .btn-outline-dark , .btn-outline-custom{
+        width:80%;
+        font-size:30px;
       }
       h3{
         font-size: 40px;
@@ -181,12 +181,18 @@
       }
 
       .card{
-        width: 100%;
+        width: 90%;
         margin: auto;
       }
       @media only screen and (max-width:480px) {
         .btn-outline-dark{
           font-size: 10px;
+        }
+        .btn-outline-custom{
+          font-size: 14px;
+          height: 40px;
+          margin-bottom: 5%;
+          
         }
         
         h3{

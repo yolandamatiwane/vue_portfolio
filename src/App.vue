@@ -40,9 +40,8 @@ export default{
 
 
 body{
-  /* background-image: url('https://slidescorner.com/wp-content/uploads/2022/09/01-Heidi-Pastel-Abstract-Organic-Shapes-Background-by-SlidesCorner.jpg');
-  background-size: cover; */
   background-color:rgb(204, 192, 255);
+  margin-bottom: 30px;
 }
 
 </style>

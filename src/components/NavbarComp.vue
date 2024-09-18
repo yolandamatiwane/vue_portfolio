@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg">   
     <div id="nav" class="container-fluid">
             <a class="navbar-brand" href="#">
-              <!-- <img class="logo" src="https://yolandamatiwane.github.io/vueProjectImages/icons/Beige%20Minimal%20Personal%20Make%20Up%20Artist%20Logo.png" id="logo"> -->
+                  Yolanda<span> M</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon" ></span>
@@ -41,7 +41,7 @@
                       <i class="bi bi-book-fill"></i>
                       <!-- <img src="https://yolandamatiwane.github.io/vueProjectImages/icons/profile.png"> -->
                       <Transition name="fade" mode="out-in">
-                        <span v-if="displayLabel && label==='Resume'" class="nav-label">Education</span>
+                        <span v-if="displayLabel && label==='Resume'" class="nav-label">Education & Experience</span>
                       </Transition>
                       <span class="nav-label" id="media">Education</span>
                     </div>
@@ -105,7 +105,7 @@ methods:{
     align-items: center;
   }
   nav li{
-    padding-right: 30px;
+    padding-right: 60px;
     padding-bottom: 0px;
   }
   nav a {

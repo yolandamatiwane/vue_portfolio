@@ -48,11 +48,6 @@ export default {
 }
 </script>
 <style scoped>
-    /* img{
-        width:300px;
-        height:200px;
-        margin-left:700px;
-    } */
     label,span{
         color:#bb7aad;
         /* text-shadow: 2px 2px 4px #000000; */
@@ -68,7 +63,7 @@ export default {
         width: 35%;
         margin-bottom: 10px;
         /* background-color: #2c3e50; come back */
-        margin-right: 40px;
+        margin-left: 170px;
         border-radius: 10px;
 
     }
@@ -90,20 +85,28 @@ export default {
       width:15%;
       /* margin-left:100px; */
     }
-    /* #resumeMainDiv {
-        margin-top: 60px;
-    } */
-    /* h1 {
-        font-family: "Bangers";
-        font-size: 100px;
-        color: #bb7aad;
-        text-shadow: 2px 2px 4px #000000;
-    } */
     .flex-container {
         /* align-items: start; */
         justify-content: center;
         display: flex;
         flex-wrap: wrap;
         /* justify-content: space-between; */
+    }
+    @media(max-width:1100px){
+        #eduDivs, #workDiv{
+            margin-left:0px;
+        }
+    }
+    @media(max-width:770px){
+        .flex-container{
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        /* #eduDivs, #workDiv{
+            width: 100%;
+            align-items: center;
+            margin: auto;
+        } */
     }
 </style>

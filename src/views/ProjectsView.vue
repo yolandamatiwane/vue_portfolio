@@ -13,11 +13,10 @@
       
     </select>
     <div id="about">
-      <spinner-comp/>
       <div class="card" v-for="project in filterProjects" :key="project.name">
         <div >
           <h3>
-            <span class="typing-effect">{{ project.name }}</span><span class="cursor">_</span>
+            ><span class="typing-effect">{{ project.name }}</span><span class="cursor">_</span>
           </h3>
           <img data-aos="zoom-in" data-aos-duration="1500" v-if="project.visuals.type === 'image'" :src="project.visuals.url">
           <video v-else :src="project.visuals.url" type="video/mp4" controls>
@@ -66,10 +65,10 @@
   </script>
   <style scoped>
     h1{
-      margin-top: 50px;
+      margin-top: 20px;
       font-family:"Bangers";
-      font-size: 100px;
-      color: #670652;
+      font-size: 50px;
+      color: #bb7aad;
       text-shadow: 2px 2px 4px #000000;
     }
     h3{
@@ -102,8 +101,8 @@
     }
     #about {
       display: flex;
-      justify-content: center; /* Center align cards horizontally */
-      flex-wrap: wrap;  /* Allow cards to wrap to the next line if space is insufficient */
+      justify-content: center;
+      flex-wrap: wrap;
       text-align:start;
     }
     h5{
@@ -111,7 +110,7 @@
       font-weight: 800;
     }
     p{
-      width: 80%;
+      width: 100%;
     }
     .card{
       background-color: rgba(128, 0, 128, 0.0);
@@ -167,11 +166,11 @@
     }
     @media only screen and (max-width:768px){
       h1{
-        font-size: 60px;
+        font-size: 40px;
       }
-      .btn-outline-dark{
-        width:60%;
-        font-size:20px;
+      .btn-outline-dark , .btn-outline-custom{
+        width:80%;
+        font-size:30px;
       }
       h3{
         font-size: 40px;
@@ -180,13 +179,20 @@
         display: grid;
         grid-template-columns: repeat(1,1fr);
       }
+
       .card{
-        width: fit-content;
-        margin: 5px;
+        width: 90%;
+        margin: auto;
       }
       @media only screen and (max-width:480px) {
         .btn-outline-dark{
           font-size: 10px;
+        }
+        .btn-outline-custom{
+          font-size: 14px;
+          height: 40px;
+          margin-bottom: 5%;
+          
         }
         
         h3{

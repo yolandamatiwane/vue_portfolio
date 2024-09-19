@@ -99,6 +99,9 @@ methods:{
 }
 </script>
 <style scoped>
+  .navbar-brand{
+    font-family: "Bangers";
+  }
   nav{
     background-color: rgba(137, 43, 226, 0);
     display: flex;
@@ -194,5 +197,19 @@ methods:{
 
 .navbar-nav .nav-item {
   margin-bottom: 1rem; /* Adjust as needed */
+}
+
+@media (max-width: 770px) {
+  /* .bi {
+    display: none;
+  } */
+  .nav-label {
+    display: block;
+  }
+  /* .nav-content {
+    flex-direction: row; 
+    align-items: center;
+    justify-content: center;
+  } */
 }
 </style>

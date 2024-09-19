@@ -20,7 +20,7 @@
           <br>
           <div class="row" id="skillDiv">
             <h3>Skills:</h3>
-                <div class="col-6" id="skill"> 
+                <div class="col-sm-6 col-12" id="skill"> 
                     <h4>Coding Skills</h4>
                     <div v-for="skill in skillsData" :key="skill.name" >
                         <h5>
@@ -28,7 +28,7 @@
                         </h5>  
                     </div>
                 </div>
-                <div class="col-6" id="skill">
+                <div class="col-sm-6 col-12" id="skill">
                     <h4>Soft Skills</h4>
                     <h5>
                         <span>></span> Problem-Solving and Critical Thinking
@@ -73,7 +73,7 @@ export default {
     height:250px;
     border-radius:50%;
     /* margin-left:600px; */
-    /* box-shadow: 4px 4px 2px black; */
+    box-shadow: 4px 4px 2px black;
     /* border: 4px solid rgba(153, 116, 150, 0.3); */
   }
   .col-sm-8 {
@@ -81,20 +81,7 @@ export default {
     background-color: rgba(255, 255, 255, 0);
     border-radius: 10px;
     align-items: center;
-    color: white;
-  }
-  .card{
-    margin:auto;
-  }
-  .card-text{
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* text-shadow: 4px 4px 2 px white; */
-    margin-top: 10px;
     /* color: white; */
-  }
-  .card{
-    margin:auto;
   }
   .card-text{
     /* align-items: center; */
@@ -114,17 +101,13 @@ export default {
     text-shadow: 2px 2px 4px #000000;
   }
   .card{
-    /* color: white; */
+    min-height: 100vh;
+    margin:auto;
     padding:10px;
-    height:450px;
     background-color:rgb(204, 192, 255);
     width:90%;
     border:none;
-    /* margin-bottom:40px; */
     text-shadow: 2px 2px 4px rgb(163, 163, 163);
-
-    /* margin-left:90px; */
-    
   }
   span{
     color: #a01684;
@@ -132,6 +115,7 @@ export default {
   }
   #skill{
     text-align: start;
+    /* margin-left: 130px; */
   }
   #skillDiv{
     margin-top: 30px;
@@ -149,4 +133,21 @@ export default {
   }
 
   /* Responsiveness */
+  @media(max-width:800px){
+    img{
+      width: fit-content;
+      height: 200px;
+      margin: auto;
+
+    }
+    .card{
+      width: 100%;
+    }
+  }
+  @media(max-width:575px){
+    #skill{
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
 </style>

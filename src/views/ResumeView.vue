@@ -92,7 +92,7 @@ export default {
         flex-wrap: wrap;
         /* justify-content: space-between; */
     }
-    @media(max-width:1100px){
+    @media(max-width:1150px){
         #eduDivs, #workDiv{
             margin-left:0px;
         }
@@ -103,10 +103,20 @@ export default {
             align-items: center;
             justify-content: center;
         }
-        /* #eduDivs, #workDiv{
+        #eduDivs, #workDiv{
+            margin-left:0px;
             width: 100%;
-            align-items: center;
-            margin: auto;
-        } */
+            /* align-items: center; */
+            text-align: center;
+            /* margin: auto; */
+        }
+    }
+    @media(max-width:450px){
+        #eduDivs, #workDiv{
+            width: 100%;
+        }
+        .btn-outline-dark{
+            width: 40%;
+        }
     }
 </style>

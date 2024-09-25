@@ -114,7 +114,8 @@ export default {
     font-size: 20px;
   }
   #skill{
-    text-align: start;
+    text-align: center;
+    /* width:35%; */
     /* margin-left: 130px; */
   }
   #skillDiv{

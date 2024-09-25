@@ -1,6 +1,6 @@
 <template>
     <h1>Projects:</h1>
-    <select class="btn btn-outline-dark" v-model="selectedCategory">
+    <!-- <select class="btn btn-outline-dark" v-model="selectedCategory">
       <option value="">
         All categories
       </option>
@@ -11,7 +11,7 @@
         Bootstrap
       </option>
       
-    </select>
+    </select> -->
     <div id="about">
       <div class="card" v-for="project in filterProjects" :key="project.name">
         <div >

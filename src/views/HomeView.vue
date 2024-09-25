@@ -198,24 +198,30 @@ export default {
     }
   }
   /* for mobile screens */
-  @media only screen and (max-width:480px){
+  @media(max-width:480px){
     #home{
       padding:0px;
       margin: auto;
     }
     #image{
       margin-top: 10px;
+      margin-left:20px;
+      width: 100%;
     }
     .btn-outline-custom, .btn-outline-light {
       margin-left: 5px;
+      width: 100%;
       height: 30px;
-      font-size: 14px;
+      font-size: 18px;
     }
     h1{
       font-size: 36px;  
     }
-    h2,h4,span{
-      font-size: 16px;
+    h2{
+      font-size: 30px;
+    }
+    h4,span{
+      font-size:26px;
     }
   }
 

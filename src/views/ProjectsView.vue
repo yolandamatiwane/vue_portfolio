@@ -16,7 +16,7 @@
       <div class="card" v-for="project in filterProjects" :key="project.name">
         <div >
           <h3>
-            ><span class="typing-effect">{{ project.name }}</span><span class="cursor">_</span>
+            ><span class="typing-effect">{{ typedText }}</span><span class="cursor" :class="{ blinking: isBlinking }">_</span>
           </h3>
           <img data-aos="zoom-in" data-aos-duration="1500" v-if="project.visuals.type === 'image'" :src="project.visuals.url">
           <video v-else :src="project.visuals.url" type="video/mp4" controls>
@@ -41,7 +41,10 @@
       // },
       data(){
         return {
-          selectedCategory:''
+          selectedCategory:'',
+          typedText:'',
+          typingSpeed:100,
+          isBlinking:true
         }
   
       },
@@ -58,10 +61,22 @@
       methods: {
         projectLoaded(project) {
           return project.loaded === true
-        }
+        },
+        startTypingEffect() {
+          const projectName = this.filterProjects[0]?.name || '';
+          let index = 0;
+
+          const typingInterval = setInterval(() => {
+            if (index < projectName.length) {
+              this.typedText += projectName.charAt(index);
+              index++;
+            } else {
+              clearInterval(typingInterval);
+            }
+          }, this.typingSpeed);
+        },
       }
-      
-  }
+    }
   </script>
   <style scoped>
     h1{

@@ -13,10 +13,10 @@
       
     </select> -->
     <div id="about">
-      <div class="card" v-for="project in filterProjects" :key="project.name">
+      <div class="card" v-for="(project,index) in filterProjects" :key="project.name">
         <div >
           <h3>
-            ><span class="typing-effect">{{ typedText }}</span><span class="cursor" :class="{ blinking: isBlinking }">_</span>
+            ><span class="typing-effect">{{ typedText[index] }}</span><span class="cursor" :class="{ blinking: isBlinking }">_</span>
           </h3>
           <img data-aos="zoom-in" data-aos-duration="1500" v-if="project.visuals.type === 'image'" :src="project.visuals.url">
           <video v-else :src="project.visuals.url" type="video/mp4" controls>
@@ -42,7 +42,7 @@
       data(){
         return {
           selectedCategory:'',
-          typedText:'',
+          typedText:[],
           typingSpeed:100,
           isBlinking:true
         }
@@ -62,19 +62,31 @@
         projectLoaded(project) {
           return project.loaded === true
         },
-        startTypingEffect() {
-          const projectName = this.filterProjects[0]?.name || '';
-          let index = 0;
+        startTypingEffect(index) {
+          const projectName = this.filterProjects[index]?.name || '';
+          this.typedText[index] =''
+          let charIndex = 0;
 
           const typingInterval = setInterval(() => {
-            if (index < projectName.length) {
-              this.typedText += projectName.charAt(index);
-              index++;
+            if (charIndex < projectName.length) {
+              this.typedText[index] += projectName.charAt(charIndex);
+              charIndex++;
             } else {
               clearInterval(typingInterval);
             }
           }, this.typingSpeed);
         },
+        blinkCursor() {
+          setInterval(() => {
+            this.isBlinking = !this.isBlinking;
+          }, 500);
+        },
+      },
+      mounted(){
+        this.blinkCursor();
+        this.filterProjects.forEach((_,index) => {
+          this.startTypingEffect(index);
+        });
       }
     }
   </script>
@@ -95,17 +107,17 @@
       align-items: center;
     }
     .typing-effect{
-      border-right: 2px solid white;
-      white-space: nowrap;
-      overflow: hidden;
-      animation: typing 2s steps(20,end);
+      display:inline-block;
     }
     .cursor{
       font-size:30px;
+    }
+    .blinking {
+      opacity: 1;
       animation: blink-caret 0.75s step-end infinite;
     }
     img{
-      width:80%;
+      width:100%;
       height:250px;
       border-radius: 10px;
       box-shadow: 10px 10px 5px #670652;
@@ -130,7 +142,7 @@
     .card{
       background-color: rgba(128, 0, 128, 0.0);
       width:40%;
-      
+      height: 600px;
       margin-left:70px;
       margin-top:10px;
       margin-bottom:30px;
@@ -139,7 +151,6 @@
     }
 
     .btn-outline-custom, .btn-outline-dark{
-      margin-left:20px;
       height:60px;
     }
     .btn-outline-dark{
@@ -164,10 +175,9 @@
       color: #670652;
     }
     #btns{
-      display: inline;
-      padding: 100px;
-      width:100%;
-      justify-content: space-between;
+      display: flex;
+      justify-content:space-between;
+      margin-top: auto;
       
     }
     @keyframes typing {
@@ -176,8 +186,8 @@
     }
 
     @keyframes blink-caret {
-      from, to { border-color: transparent; }
-      50% { border-color: white; }
+      from, to { opacity: 0; }
+      50% { opacity: 1; }
     }
     @media only screen and (max-width:768px){
       h1{

@@ -14,7 +14,7 @@
     </select> -->
     <div id="about">
       <div class="card" v-for="(project,index) in filterProjects" :key="project.name">
-        <div >
+        <div class="card-content">
           <h3>
             ><span class="typing-effect">{{ typedText[index] }}</span><span class="cursor" :class="{ blinking: isBlinking }">_</span>
           </h3>
@@ -22,13 +22,11 @@
           <video v-else :src="project.visuals.url" type="video/mp4" controls>
           </video>
           <p>{{ project.description }}</p>
-          <div id="bnts">
+        </div>
+          <div class="card-footer" id="bnts">
             <a :href="project.gitHub" target="_blank" class="btn btn-outline-custom">GitHub</a>
             <a :href="project.vercel" target="_blank" class="btn btn-outline-custom">Live Demo</a>
           </div>
-        </div>
-        
-          
       </div>
     </div>
       

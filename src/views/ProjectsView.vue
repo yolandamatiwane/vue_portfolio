@@ -22,11 +22,11 @@
           <video v-else :src="project.visuals.url" type="video/mp4" controls>
           </video>
           <p>{{ project.description }}</p>
-        </div>
           <div class="card-footer" id="bnts">
             <a :href="project.gitHub" target="_blank" class="btn btn-outline-custom">GitHub</a>
             <a :href="project.vercel" target="_blank" class="btn btn-outline-custom">Live Demo</a>
           </div>
+        </div>
       </div>
     </div>
       
@@ -129,6 +129,7 @@
       justify-content: center;
       flex-wrap: wrap;
       text-align:start;
+      align-items: stretch;
     }
     h5{
       color:white;
@@ -140,12 +141,13 @@
     .card{
       background-color: rgba(128, 0, 128, 0.0);
       width:40%;
-      height: 600px;
+      height: 650px;
       margin-left:70px;
-      margin-top:10px;
       margin-bottom:30px;
       border: none;
       font-weight:900;
+      display:flex;
+      flex-direction:column;
     }
 
     .btn-outline-custom, .btn-outline-dark{
@@ -172,12 +174,17 @@
       background-color: white;
       color: #670652;
     }
-    #btns{
-      display: flex;
-      justify-content:space-between;
-      margin-top: auto;
-      
+    .card-content {
+      overflow-y: auto; 
     }
+    /* .card-footer {
+      margin-top: auto;
+    } */
+    /* #btns{
+      display: flex;
+      justify-content:space-between ;
+      
+    } */
     @keyframes typing {
       from { width: 0; }
       to { width: 100%; }

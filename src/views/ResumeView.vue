@@ -7,11 +7,11 @@
                     <div v-for="work in workExpData" :key="work.description" id="workDiv">
                     <h4><span>></span>  {{ work.year }}</h4>
                     <h5><label>Place of Employment:</label> {{ work.placeOfWork }}</h5>
-                    <h5><label>Role:</label>{{ work.description }}</h5>
-                    <h6>Reference:</h6>
+                    <h5><label>Role:</label> {{ work.description }}</h5>
+                    <!-- <h6>Reference:</h6>
                     <h5><label>Name:</label> {{ work.contact.name }}</h5>
                     <h5 v-if="work.contact.position"><label>Position:</label> {{ work.contact.position }}</h5>
-                    <h5><label>Email:</label> {{ work.contact.email }}</h5>
+                    <h5><label>Email:</label> {{ work.contact.email }}</h5> -->
 
                 </div>
             </div>
@@ -61,7 +61,8 @@ export default {
         /* box-shadow: 4px 4px 2px white; */
         text-align: start;
         width: 35%;
-        margin-bottom: 10px;
+        margin-top: 10px;
+        margin-bottom: 20px;
         /* background-color: #2c3e50; come back */
         margin-left: 170px;
         border-radius: 10px;

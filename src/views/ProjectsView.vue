@@ -22,7 +22,7 @@
           <video v-else :src="project.visuals.url" type="video/mp4" controls>
           </video>
           <p>{{ project.description }}</p>
-          <div class="card-footer" id="bnts">
+          <div id="bnts">
             <a :href="project.gitHub" target="_blank" class="btn btn-outline-custom">GitHub</a>
             <a :href="project.vercel" target="_blank" class="btn btn-outline-custom">Live Demo</a>
           </div>

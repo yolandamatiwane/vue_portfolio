@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg">   
+  <nav :class="['navbar navbar-expand-lg', isScrolled ? 'scrolled' : '']">   
     <div id="nav" class="container-fluid">
             <a class="navbar-brand" href="#">
                   Yolanda<span> M</span>
@@ -84,7 +84,8 @@ export default {
 data() {
   return {
     displayLabel:false,
-    label: ''
+    label: '',
+    isScrolled: false
   }
 },
 methods:{
@@ -94,11 +95,33 @@ methods:{
   },
   hide(){
     this.displayLabel = false;
+  },
+  handleScroll() {
+    this.isScrolled = window.scrollY > 50; // Adjust this value as needed
+  }
+},
+mounted(){
+  window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
   }
 }
-}
+
 </script>
 <style scoped>
+  .navbar {
+    position: fixed;
+    width: 100%;
+    margin-top: 5px;
+    transition: background-color 0.3s;
+    top:0;
+    /* z-index: 1000; */
+  }
+
+  .scrolled {
+    /* background-color: white; */
+  }
   .navbar-brand{
     font-family: "Bangers";
   }
@@ -106,6 +129,7 @@ methods:{
     background-color: rgba(137, 43, 226, 0);
     display: flex;
     align-items: center;
+    height:40px;
   }
   nav li{
     padding-right: 60px;
@@ -200,9 +224,9 @@ methods:{
 }
 
 @media (max-width: 770px) {
-  /* .bi {
+  .bi {
     display: none;
-  } */
+  }
   .nav-label {
     display: block;
   }

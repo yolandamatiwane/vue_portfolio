@@ -43,6 +43,7 @@ body{
   background-color:rgb(204, 192, 255);
   margin-bottom: 30px;
   height: 100%;
+  margin-top: 80px;
 }
 
 </style>

@@ -3,7 +3,7 @@
         <a href="https://1drv.ms/w/c/c603b707ec55c120/ESDBVewHtwMggMaLBAAAAAABbM-MPM5RWTgSVZdrBlTG3Q" target="_blank"><button class="btn btn-outline-dark"> My CV</button></a>
         <div class="card">
             <h3>Work Experience:</h3>
-                <div class="flex-container">
+                <div class="flex-container2">
                     <div v-for="work in workExpData" :key="work.description" id="workDiv">
                     <h4><span>></span>  {{ work.year }}</h4>
                     <h5><label>Place of Employment:</label> {{ work.placeOfWork }}</h5>
@@ -18,7 +18,7 @@
         </div>
         <div class="card">
             <h3>Education:</h3>
-           <div class="flex-container">
+           <div class="flex-container mt-2">
                 <div v-for="edu in educationData" :key="edu.description" id="eduDivs">
                     
                     <h4><span>></span> {{ edu.year }}</h4>
@@ -49,24 +49,30 @@ export default {
 </script>
 <style scoped>
     label,span{
-        color:#bb7aad;
-        /* text-shadow: 2px 2px 4px #000000; */
+        color: rgb(2, 2, 94);
+        text-shadow: 2px 2px 4px #ffffff;
     }
     .card h3, span{
         text-align: center;
         text-shadow: 2px 2px 4px #ffffff;
 
     }
-    #eduDivs, #workDiv{
+    #workDiv{
         /* box-shadow: 4px 4px 2px white; */
-        text-align: start;
+        text-align: center;
         width: 35%;
         margin-top: 10px;
         margin-bottom: 20px;
-        /* background-color: #2c3e50; come back */
-        margin-left: 170px;
+        background-color: #bb7aad;
+        /* margin-left: 150px; */
         border-radius: 10px;
-
+        padding: 55px ;
+    }
+    #eduDivs{
+        background-color: #bb7aad;
+        /* width: 25%; */
+        border-radius: 10px;
+        padding: 55px ;
     }
    .card {
         background-color: rgb(204, 192, 255);
@@ -87,11 +93,14 @@ export default {
       /* margin-left:100px; */
     }
     .flex-container {
-        /* align-items: start; */
-        justify-content: center;
         display: flex;
         flex-wrap: wrap;
-        /* justify-content: space-between; */
+        justify-content: space-evenly;
+    }
+    .flex-container2{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly
     }
     @media(max-width:1150px){
         #eduDivs, #workDiv{

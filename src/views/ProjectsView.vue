@@ -22,9 +22,9 @@
           <video v-else :src="project.visuals.url" type="video/mp4" controls>
           </video>
           <p>{{ project.description }}</p>
-          <div id="bnts">
-            <a :href="project.gitHub" target="_blank" class="btn btn-outline-custom">GitHub</a>
-            <a :href="project.vercel" target="_blank" class="btn btn-outline-custom">Live Demo</a>
+          <div id="bnts" class="align-items-center">
+            <a :href="project.gitHub" target="_blank" class="btn btn-outline-custom mx-1">GitHub</a>
+            <a :href="project.vercel" target="_blank" class="btn btn-outline-custom mx-1">Live Demo</a>
           </div>
         </div>
       </div>
@@ -115,7 +115,7 @@
       animation: blink-caret 0.75s step-end infinite;
     }
     img{
-      width:100%;
+      width:95%;
       height:250px;
       border-radius: 10px;
       box-shadow: 10px 10px 5px #670652;
@@ -129,7 +129,7 @@
       justify-content: center;
       flex-wrap: wrap;
       text-align:start;
-      align-items: stretch;
+      /* align-items: stretch; */
     }
     h5{
       color:white;
@@ -148,6 +148,14 @@
       font-weight:900;
       display:flex;
       flex-direction:column;
+    }
+    #bnts {
+      display: flex;
+      justify-content: center; 
+      align-items: center;
+      margin-top: 20px; 
+      width: 100vw; 
+      margin: auto;
     }
 
     .btn-outline-custom, .btn-outline-dark{

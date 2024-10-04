@@ -34,9 +34,6 @@
                         <span>></span> Problem-Solving and Critical Thinking
                     </h5>
                     <h5>
-                        <span>></span> Adaptability
-                    </h5>
-                    <h5>
                         <span>></span> Effective Communication
                     </h5>
                     <h5>
@@ -44,6 +41,9 @@
                     </h5>
                     <h5>
                         <span>></span> Time Management
+                    </h5>
+                    <h5>
+                        <span>></span> Adaptability
                     </h5>
                     <h5>
                         <span>></span> Networking
@@ -115,14 +115,16 @@ export default {
   }
   #skill{
     text-align: center;
-    /* width:35%; */
-    /* margin-left: 130px; */
+    background-color: #bb7aad;
+    border-radius: 10px;
+    width:35%;
+    margin-left: 130px;
   }
   #skillDiv{
     margin-top: 30px;
     display: flex;
-    /* flex-wrap: wrap; */
-    /* justify-content: space-evenly; */
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
   .cursor{
     font-size:30px;

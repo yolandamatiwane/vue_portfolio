@@ -84,16 +84,11 @@ export default {
     /* color: white; */
   }
   .card-text{
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* text-shadow: 4px 4px 2 px white; */
     margin-top: 10px;
-    /* color: white; */
   }
   #mainAboutDiv {
     font-family:"Bangers";
     justify-content: center;
-    /* margin-bottom: 50px; */
   }
   h1,h3{
     /* font-size: 50px; */

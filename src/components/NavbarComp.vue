@@ -1,5 +1,6 @@
 <template>
-  <nav :class="['navbar navbar-expand-lg', isScrolled ? 'scrolled' : '']">   
+  <!-- <nav :class="['navbar navbar-expand-lg', isScrolled ? 'scrolled' : '']">    -->
+    <nav class="navbar navbar-expand-lg">
     <div id="nav" class="container-fluid">
             <a class="navbar-brand" href="#">
                   Yolanda<span> M</span>
@@ -95,16 +96,17 @@ methods:{
   },
   hide(){
     this.displayLabel = false;
-  },
-  handleScroll() {
-    this.isScrolled = window.scrollY > 50; // Adjust this value as needed
   }
+  // ,
+  //handleScroll() {
+   // this.isScrolled = window.scrollY > 50;
+ // }
 },
 mounted(){
-  window.addEventListener('scroll', this.handleScroll);
-  },
-  beforeUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
+  // window.addEventListener('scroll', this.handleScroll);
+  // },
+  // beforeUnmount() {
+  //   window.removeEventListener('scroll', this.handleScroll);
   }
 }
 
@@ -223,17 +225,5 @@ mounted(){
   margin-bottom: 1rem; /* Adjust as needed */
 }
 
-@media (max-width: 770px) {
-  .bi {
-    display: none;
-  }
-  .nav-label {
-    display: block;
-  }
-  /* .nav-content {
-    flex-direction: row; 
-    align-items: center;
-    justify-content: center;
-  } */
-}
+
 </style>

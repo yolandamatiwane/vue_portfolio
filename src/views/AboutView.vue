@@ -20,33 +20,15 @@
           <br>
           <div class="row" id="skillDiv">
             <h3>Skills:</h3>
-                <div class="col-sm-6 lg-12" id="skill"> 
+                <div class="col-sm-6 col-12" id="skill"> 
                     <h4>Coding Skills</h4>
-                    <!-- <div v-for="skill in skillsData" :key="skill.name" >
-                      <h5>
-                        <span>></span> {{ skill.name }}
-                      </h5>   
-                    </div>      -->
-                    <h5>
-                        <span>></span>HTML <i class="lab la-html5"></i> 
-                      </h5>  
-                      <h5>
-                        <span>></span>CSS <i class="lab la-css3"></i>
-                      </h5>                
-                      <h5>
-                        <span>></span>BOOTSTRAP <i class="lab la-bootstrap"></i> 
-                      </h5>                
-                      <h5>
-                        <span>></span>VUE.JS <i class="lab la-vuejs"></i>
-                      </h5>                
-                      <h5>
-                        <span>></span>JAVASCRIPT <i class="lab la-js"></i> 
-                      </h5>                
-                      <h5>
-                        <span>></span>NODE.JS <i class="lab la-node-js"></i> 
-                      </h5>                
+                    <div v-for="skill in skillsData" :key="skill.name" >
+                        <h5>
+                            <span>></span> {{ skill.name }}
+                        </h5>  
+                    </div>
                 </div>
-                <div class="col-sm-6 lg-12" id="skill">
+                <div class="col-sm-6 col-12" id="skill">
                     <h4>Soft Skills</h4>
                     <h5>
                         <span>></span> Problem-Solving and Critical Thinking
@@ -118,7 +100,7 @@ export default {
     margin:auto;
     padding:10px;
     background-color:rgb(204, 192, 255);
-    width:100%;
+    width:90%;
     border:none;
     text-shadow: 2px 2px 4px rgb(163, 163, 163);
   }
@@ -127,21 +109,17 @@ export default {
     font-size: 20px;
   }
   #skill{
-    text-align: start;
+    text-align: center;
     background-color: #bb7aad;
     border-radius: 10px;
-    /* width:35%; */
-    /* margin-left: 130px; */
-    margin: auto;
+    width:35%;
+    margin-left: 130px;
   }
   #skillDiv{
-    width: 100%;
     margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: auto;
-    padding-left: 30px;
   }
   .cursor{
     font-size:30px;
@@ -168,7 +146,6 @@ export default {
     #skill{
       text-align: center;
       margin-top: 20px;
-      font-size: 18px;
     }
   }
 </style>

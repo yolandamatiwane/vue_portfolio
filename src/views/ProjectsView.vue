@@ -24,13 +24,10 @@
           <p v-if="project.showDescription">{{ project.description }}</p>
 
           <div id="bnts" class="align-items-center">
-            <button @click="toggleDescription(index)" class="btn btn-outline-custom" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="project description">
+            <button @click="toggleDescription(index)" class="btn btn-outline-custom">
                 <i class="bi bi-info-circle-fill"></i>
             </button>
-            <a :href="project.gitHub" target="_blank" class="btn btn-outline-custom mx-1"
-            data-bs-toggle="tooltip" data-bs-placement="top"
-              data-bs-custom-class="custom-tooltip"
-              data-bs-title="project description"><i class="bi bi-github"></i></a>
+            <a :href="project.gitHub" target="_blank" class="btn btn-outline-custom mx-1"><i class="bi bi-github"></i></a>
             <a :href="project.vercel" target="_blank" class="btn btn-outline-custom mx-1"><i class="bi bi-rocket-takeoff-fill"></i></a>
           </div>
         </div>
@@ -39,8 +36,8 @@
       
   </template>
   <script>
+  
   // import SpinnerComp from '/src/components/SpinnerComp.vue'
-  // import 'bootstrap';
   export default {
       // components:{
       //   SpinnerComp
@@ -102,12 +99,8 @@
         this.blinkCursor();
         this.filterProjects.forEach((_, index) => {
           this.startTypingEffect(index);
-          this.projectVisibility[index] = false; // Initialize visibility state
+          this.projectVisibility[index] = false;
         })
-        // const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-        //   tooltipTriggerList.forEach(tooltipTriggerEl => {
-        //     new bootstrap.Tooltip(tooltipTriggerEl);
-        //   });
       }
     };
   </script>
@@ -140,10 +133,9 @@
       animation: blink-caret 0.75s step-end infinite;
     }
     img{
-      width:95%;
+      width:100%;
       height:250px;
       border-radius: 10px;
-      /* box-shadow: 10px 10px 5px #670652; */
       box-shadow: 0 15px 25px #670652;
       margin-bottom: 20px;
       transition: transform 0.5s ease, box-shadow 0.5s ease;
@@ -173,7 +165,7 @@
     .card{
       background-color: rgba(128, 0, 128, 0.0);
       width:40%;
-      height: 650px;
+      min-height: 350px;
       margin-left:70px;
       margin-bottom:30px;
       border: none;
@@ -186,7 +178,6 @@
       justify-content: center; 
       align-items: center;
       margin-top: 20px; 
-
       margin: auto;
     }
 

@@ -10,7 +10,7 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <router-link to="/" @mousemove="show('Home')" @mouseleave="hide()">
+            <router-link to="/" @mousemove="show('Home')" @mouseleave="hide()" data-bs-dismiss="collapse">
               <div class="nav-content">
                 <span class="nav-label" id="media">Home</span>
                 <i class="bi bi-house-door-fill"></i>
@@ -92,9 +92,9 @@ export default {
 
 <style scoped>
 .navbar {
-  position: fixed;
+  /* position: fixed;*/
   width: 100%;
-  margin-top: 5px;
+  /*margin-top: 5px;
   transition: background-color 0.3s;
   top: 0;
   z-index: 1050;

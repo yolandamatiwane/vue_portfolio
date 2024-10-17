@@ -113,13 +113,14 @@ export default {
     background-color: #bb7aad;
     border-radius: 10px;
     width:35%;
-    margin-left: 130px;
+    /* margin-left: 100px; */
   }
   #skillDiv{
     margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: auto;
   }
   .cursor{
     font-size:30px;
@@ -131,9 +132,9 @@ export default {
   }
 
   /* Responsiveness */
-  @media(max-width:800px){
+  @media(max-width:850px){
     img{
-      width: fit-content;
+      width: 70%;
       height: 200px;
       margin: auto;
 
@@ -141,11 +142,19 @@ export default {
     .card{
       width: 100%;
     }
+    /* #skill{
+      width: 100%;
+      margin-left: 40px;
+    } */
   }
   @media(max-width:575px){
     #skill{
       text-align: center;
       margin-top: 20px;
+      /* font-size: smaller; */
+    }
+    h5{
+      font-size: smaller;
     }
   }
 </style>

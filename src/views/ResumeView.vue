@@ -117,9 +117,7 @@ export default {
         #eduDivs, #workDiv{
             margin-left:0px;
             width: 100%;
-            /* align-items: center; */
             text-align: center;
-            /* margin: auto; */
         }
     }
     @media(max-width:450px){

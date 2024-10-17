@@ -94,7 +94,7 @@ export default {
 .navbar {
   /* position: fixed;*/
   width: 100%;
-  /*margin-top: 5px;
+  margin-top: 10px;
   transition: background-color 0.3s;
   top: 0;
   z-index: 1050;

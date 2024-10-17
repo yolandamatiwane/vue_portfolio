@@ -1,6 +1,6 @@
 <template>
     <div id="resumeMainDiv">
-        <a href="https://1drv.ms/w/c/c603b707ec55c120/ESDBVewHtwMggMaLBAAAAAABbM-MPM5RWTgSVZdrBlTG3Q" target="_blank"><button class="btn btn-outline-dark"> My CV</button></a>
+        <a href="https://docs.google.com/document/d/13-QKdcSl-EjYXoaCUtDCAho8w_uptShLVTAaEfVjGUw/edit?usp=drive_link" target="_blank"><button class="btn btn-outline-dark"> My CV</button></a>
         <div class="card">
             <h3>Work Experience:</h3>
                 <div class="flex-container2">
@@ -105,6 +105,7 @@ export default {
     @media(max-width:1150px){
         #eduDivs, #workDiv{
             margin-left:0px;
+            margin-top: 15px;
         }
     }
     @media(max-width:770px){

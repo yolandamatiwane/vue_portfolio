@@ -119,7 +119,7 @@ export default {
     margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin: auto;
   }
   .cursor{
@@ -142,13 +142,14 @@ export default {
     .card{
       width: 100%;
     }
-    /* #skill{
-      width: 100%;
-      margin-left: 40px;
-    } */
+    #skill{
+      width: 40%;
+      /* margin-left: 40px; */
+    }
   }
   @media(max-width:575px){
     #skill{
+      width: 100%;
       text-align: center;
       margin-top: 20px;
       /* font-size: smaller; */

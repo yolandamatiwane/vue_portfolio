@@ -4,15 +4,10 @@
         <div class="card">
             <h3>Work Experience:</h3>
                 <div class="flex-container2">
-                    <div v-for="work in workExpData" :key="work.description" id="workDiv">
+                    <div v-for="work in workExpData" :key="work.description" id="eduDivs">
                     <h4><span>></span>  {{ work.year }}</h4>
                     <h5><label>Place of Employment:</label> {{ work.placeOfWork }}</h5>
-                    <h5><label>Role:</label> {{ work.description }}</h5>
-                    <!-- <h6>Reference:</h6>
-                    <h5><label>Name:</label> {{ work.contact.name }}</h5>
-                    <h5 v-if="work.contact.position"><label>Position:</label> {{ work.contact.position }}</h5>
-                    <h5><label>Email:</label> {{ work.contact.email }}</h5> -->
-
+                    <h5><label></label> {{ work.description }}</h5>
                 </div>
             </div>
         </div>
@@ -20,7 +15,6 @@
             <h3>Education:</h3>
            <div class="flex-container mt-2">
                 <div v-for="edu in educationData" :key="edu.description" id="eduDivs">
-                    
                     <h4><span>></span> {{ edu.year }}</h4>
                     <h5><label>Institution:</label>  {{ edu.institution }}</h5>
                     <h5>{{edu.description}}</h5>
@@ -70,9 +64,10 @@ export default {
     }
     #eduDivs{
         background-color: #bb7aad;
-        /* width: 25%; */
+        width: 30%;
         border-radius: 10px;
         padding: 55px ;
+        margin-bottom: 20px;
     }
    .card {
         background-color: rgb(204, 192, 255);

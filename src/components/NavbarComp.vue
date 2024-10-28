@@ -4,11 +4,11 @@
       <a class="navbar-brand" href="#">
         Yolanda<span> M</span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
+      <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo01">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <router-link to="/" @mousemove="show('Home')" @mouseleave="hide()" data-bs-dismiss="collapse">
               <div class="nav-content">
@@ -169,6 +169,9 @@ nav a.router-link-exact-active {
   align-items: center;
 }
 @media (max-width: 992px) {
+  .navbar{
+    z-index: 0;
+  }
 
   body {
   padding-top: 60px; /* Adjust based on your navbar height */

@@ -169,9 +169,6 @@ nav a.router-link-exact-active {
   align-items: center;
 }
 @media (max-width: 992px) {
-  .navbar{
-    z-index: 0;
-  }
 
   body {
   padding-top: 60px; /* Adjust based on your navbar height */

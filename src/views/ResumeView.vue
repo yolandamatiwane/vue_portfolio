@@ -5,9 +5,10 @@
             <h3>Work Experience:</h3>
                 <div class="flex-container2">
                     <div v-for="work in workExpData" :key="work.description" id="eduDivs">
-                    <h4><span>></span>  {{ work.year }}</h4>
-                    <h5><label>Place of Employment:</label> {{ work.placeOfWork }}</h5>
-                    <h5><label></label> {{ work.description }}</h5>
+                        <!-- <img :src="work.img" /> -->
+                        <h4><span>></span>  {{ work.year }}</h4>
+                        <h5><label>Place of Employment:</label> {{ work.placeOfWork }}</h5>
+                        <h5><label></label> {{ work.description }}</h5>
                 </div>
             </div>
         </div>
@@ -15,6 +16,7 @@
             <h3>Education:</h3>
            <div class="flex-container mt-2">
                 <div v-for="edu in educationData" :key="edu.description" id="eduDivs">
+                    <!-- <img/>  -->
                     <h4><span>></span> {{ edu.year }}</h4>
                     <h5><label>Institution:</label>  {{ edu.institution }}</h5>
                     <h5>{{edu.description}}</h5>

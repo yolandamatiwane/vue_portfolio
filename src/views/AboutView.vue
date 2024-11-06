@@ -14,13 +14,14 @@
               <p>Hello! I'm Yolanda Matiwane,23, an aspiring developer from Langa with a passion for coding and problem-solving. </p>
               <p>I discovered my love for programming in 2020 during a physics class where I learned visual Python. Since then, I've been captivated by the process of transforming ideas into functional applications. I enjoy tackling challenges and constantly seek to expand my skills.</p>
               <p>Outside of coding, I love reading, watching movies, and gaming, which fuel my creativity.</p>
+              <p> </p>
               My goal is to grow as a developer and contribute to innovative solutions in the tech industry.
             </h5>
           </div>
           <br>
           <div class="row" id="skillDiv">
             <h3>Skills:</h3>
-                <div class="col-sm-6 col-12" id="skill"> 
+                <div class="col-sm-6 col-12" id="skill" data-aos="fade-up-right"> 
                     <h4>Coding Skills</h4>
                     <div v-for="skill in skillsData" :key="skill.name" >
                         <h5>
@@ -28,7 +29,7 @@
                         </h5>  
                     </div>
                 </div>
-                <div class="col-sm-6 col-12" id="skill">
+                <div class="col-sm-6 col-12" id="skill" data-aos="fade-up-left">
                     <h4>Soft Skills</h4>
                     <h5>
                         <span>></span> Problem-Solving and Critical Thinking

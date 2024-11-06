@@ -18,9 +18,11 @@
           <h3>
             ><span class="typing-effect">{{ typedText[index] }}</span><span class="cursor" :class="{ blinking: isBlinking }">_</span>
           </h3>
-          <img data-aos="zoom-in" data-aos-duration="1500" v-if="project.visuals.type === 'image'" :src="project.visuals.url">
-          <video v-else :src="project.visuals.url" type="video/mp4" controls>
-          </video>
+          <div data-aos="zoom-out" data-aos-duration="1500">
+            <img v-if="project.visuals.type === 'image'" :src="project.visuals.url">
+            <video v-else :src="project.visuals.url" type="video/mp4" controls>
+            </video>
+          </div>
           <p v-if="project.showDescription">{{ project.description }}</p>
 
           <div id="bnts" class="align-items-center">

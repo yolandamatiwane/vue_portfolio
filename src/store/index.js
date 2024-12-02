@@ -7,7 +7,8 @@ export default createStore({
     education:null,
     skills:null,
     workExperience:null,
-    testimonials:null
+    testimonials:null,
+    badges:null
   },
   getters: {
   },
@@ -29,14 +30,18 @@ export default createStore({
     },
     setTestimonials(state,payload){
       state.testimonials = payload
+    },
+    setBadges(state,payload){
+      state.badges = payload
     }
+
   },
   actions: {
     async getAboutMe({commit}){
       
       try {let fetchedInfo = await fetch('https://yolandamatiwane.github.io/first_api/data/')
       let data = await fetchedInfo.json()
-      let {aboutMe,projects,education,skills,workExperience,testimonails}= data
+      let {aboutMe,projects,education,skills,badges,workExperience,testimonails}= data
       console.log(data);
       
 
@@ -44,6 +49,7 @@ export default createStore({
       commit('setProjects',projects)
       commit('setEducation',education)
       commit('setSkills',skills)
+      commit('setBadges',badges)
       commit('setWorkExperience',workExperience)
       commit('setTestimonials',testimonails)
     } catch(error){

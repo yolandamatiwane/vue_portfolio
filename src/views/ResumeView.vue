@@ -2,9 +2,11 @@
     <div id="resumeMainDiv">
         <a href="https://docs.google.com/document/d/13-QKdcSl-EjYXoaCUtDCAho8w_uptShLVTAaEfVjGUw/edit?usp=drive_link" target="_blank"><button class="btn btn-outline-dark"> My CV</button></a>
         <div class="card">
+            <h2><img src="https://yolandamatiwane.github.io/vueProjectImages/animatedIcons/telecommuting-unscreen.gif" id="img"/></h2>
             <h3>Work Experience:</h3>
                 <div class="flex-container2">
                     <div v-for="work in workExpData" :key="work.description" id="eduDivs">
+                        <img :src="work.img" id="eduImg"/>
                     <h4><span>></span>  {{ work.year }}</h4>
                     <h5><label>Place of Employment:</label> {{ work.placeOfWork }}</h5>
                     <h5><label></label> {{ work.description }}</h5>
@@ -12,9 +14,24 @@
             </div>
         </div>
         <div class="card">
-            <h3>Education:</h3>
+            <h2><img src="https://yolandamatiwane.github.io/vueProjectImages/animatedIcons/validation-unscreen.gif" id="img" /></h2>
+            <h3>Badges: </h3>
+           <div class="flex-container mt-2">
+                <div v-for="badge in badgesData" :key="badge.description" id="badgeDivs">
+                    <img :src="badge.img" id="badgeImg"/>
+                    <!-- <h4><span>></span> {{ badge.year }}</h4> -->
+                    <!-- <h5><label>Institution:</label>  {{ badge.institution }}</h5>
+                    <h5>{{badge.description}}</h5> -->
+
+                </div> 
+           </div> 
+        </div>
+        <div class="card">
+            <h2><img src="https://yolandamatiwane.github.io/vueProjectImages/animatedIcons/education-1--unscreen.gif" id="img" /></h2>
+            <h3>Education: </h3>
            <div class="flex-container mt-2">
                 <div v-for="edu in educationData" :key="edu.description" id="eduDivs">
+                    <img :src="edu.img" id="eduImg"/>
                     <h4><span>></span> {{ edu.year }}</h4>
                     <h5><label>Institution:</label>  {{ edu.institution }}</h5>
                     <h5>{{edu.description}}</h5>
@@ -35,13 +52,40 @@ export default {
         workExpData(){
             return this.$store.state.workExperience
         },
-        skillsData(){
-            return this.$store.state.skills
+        badgesData(){
+            return this.$store.state.badges
         }
     }
 }
 </script>
 <style scoped>
+    #badgeImg{
+        width: 120px;
+        animation: bounce 2s infinite ease-in-out;
+    }
+    #badgeDivs {
+        display: flex;
+        flex-wrap: wrap; /* Enable wrapping */
+        justify-content: center; /* Center-align images */
+        gap: 20px; /* Add space between images */
+    }
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+            transform: translateY(0);
+        }
+        40% {
+            transform: translateY(-20px);
+        }
+        60% {
+            transform: translateY(-10px);
+        }
+    }
+    #eduImg{
+        width: 100px;
+    }
+    #img{
+        width: 60px;
+    }
     label,span{
         color: rgb(2, 2, 94);
         text-shadow: 2px 2px 4px #ffffff;

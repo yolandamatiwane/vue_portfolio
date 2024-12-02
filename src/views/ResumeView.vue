@@ -31,7 +31,6 @@
             <h3>Education: </h3>
            <div class="flex-container mt-2">
                 <div v-for="edu in educationData" :key="edu.description" id="eduDivs">
-                    <img :src="edu.img" id="eduImg"/>
                     <h4><span>></span> {{ edu.year }}</h4>
                     <h5><label>Institution:</label>  {{ edu.institution }}</h5>
                     <h5>{{edu.description}}</h5>

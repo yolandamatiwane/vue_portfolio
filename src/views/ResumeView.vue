@@ -16,13 +16,9 @@
         <div class="card">
             <h2><img src="https://yolandamatiwane.github.io/vueProjectImages/animatedIcons/validation-unscreen.gif" id="img" /></h2>
             <h3>Badges: </h3>
-           <div class="flex-container mt-2">
-                <div v-for="badge in badgesData" :key="badge.description" id="badgeDivs">
+           <div class="flex-container" id="badgeDivs">
+                <div v-for="badge in badgesData" :key="badge.description" >
                     <img :src="badge.img" id="badgeImg"/>
-                    <!-- <h4><span>></span> {{ badge.year }}</h4> -->
-                    <!-- <h5><label>Institution:</label>  {{ badge.institution }}</h5>
-                    <h5>{{badge.description}}</h5> -->
-
                 </div> 
            </div> 
         </div>
@@ -31,6 +27,7 @@
             <h3>Education: </h3>
            <div class="flex-container mt-2">
                 <div v-for="edu in educationData" :key="edu.description" id="eduDivs">
+                    <img :src="edu.img" id="eduImg"/>
                     <h4><span>></span> {{ edu.year }}</h4>
                     <h5><label>Institution:</label>  {{ edu.institution }}</h5>
                     <h5>{{edu.description}}</h5>
@@ -58,16 +55,20 @@ export default {
 }
 </script>
 <style scoped>
+    #resumeMainDiv{
+        margin-top: 90px;
+    }
     #badgeImg{
         width: 120px;
         animation: bounce 2s infinite ease-in-out;
     }
-    #badgeDivs {
+
+    /* #badgeDivs {
         display: flex;
-        flex-wrap: wrap; /* Enable wrapping */
-        justify-content: center; /* Center-align images */
-        gap: 20px; /* Add space between images */
-    }
+        flex-wrap: wrap;
+        justify-content: center; 
+        gap: 20px;
+    } */
     @keyframes bounce {
         0%, 20%, 50%, 80%, 100% {
             transform: translateY(0);
@@ -81,6 +82,7 @@ export default {
     }
     #eduImg{
         width: 100px;
+        height: 70px;
     }
     #img{
         width: 60px;
@@ -140,10 +142,17 @@ export default {
         flex-wrap: wrap;
         justify-content: space-evenly
     }
+
     @media(max-width:1150px){
         #eduDivs, #workDiv{
             margin-left:0px;
             margin-top: 15px;
+        }
+        #badgeDivs {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            justify-content: center; 
         }
     }
     @media(max-width:770px){
@@ -157,6 +166,13 @@ export default {
             width: 100%;
             text-align: center;
         }
+        /* #badgeDivs {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            justify-content: center; 
+        } */
+
     }
     @media(max-width:450px){
         #eduDivs, #workDiv{
@@ -164,6 +180,9 @@ export default {
         }
         .btn-outline-dark{
             width: 40%;
+        }
+        #badgeDivs {
+            grid-template-columns: repeat(2, 1fr); 
         }
     }
 </style>

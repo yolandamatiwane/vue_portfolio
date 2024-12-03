@@ -40,11 +40,10 @@ export default{
 
 body{
   background-color:rgb(204, 192, 255);
-  /*margin-bottom: 30px; */
+
   height: 100%;
-  /*margin-top: 10px;*/
 }
-/* routerview{
-  margin-top: auto;
+/* router-view{
+  margin-top: 90px;
 } */
 </style>

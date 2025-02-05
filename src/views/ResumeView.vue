@@ -1,6 +1,6 @@
 <template>
     <div id="resumeMainDiv">
-        <a href="https://docs.google.com/document/d/13-QKdcSl-EjYXoaCUtDCAho8w_uptShLVTAaEfVjGUw/edit?usp=drive_link" target="_blank"><button class="btn btn-outline-dark"> My CV</button></a>
+        <a href="https://docs.google.com/document/d/13-QKdcSl-EjYXoaCUtDCAho8w_uptShLVTAaEfVjGUw/edit?usp=sharing" target="_blank"><button class="btn btn-outline-dark"> My CV</button></a>
         <div class="card">
             <h2><img src="https://yolandamatiwane.github.io/vueProjectImages/animatedIcons/telecommuting-unscreen.gif" id="img"/></h2>
             <h3>Work Experience:</h3>

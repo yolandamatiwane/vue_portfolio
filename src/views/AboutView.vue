@@ -11,11 +11,21 @@
           </div>
           <div class="col-sm-8 lg-12">
             <h5 class="card-text">
-              <p>Hello! I'm Yolanda Matiwane,23, an aspiring developer from Langa with a passion for coding and problem-solving. </p>
+              <p>Hello! I'm Yolanda Matiwane, 23, an aspiring developer from Langa with a passion for coding and problem-solving.</p>
+              <br>
               <p>I discovered my love for programming in 2020 during a physics class where I learned visual Python. Since then, I've been captivated by the process of transforming ideas into functional applications. I enjoy tackling challenges and constantly seek to expand my skills.</p>
-              <p>Outside of coding, I love reading, watching movies, and gaming, which fuel my creativity.</p>
-              <p> </p>
-              My goal is to grow as a developer and contribute to innovative solutions in the tech industry.
+              <br>
+              <p>
+                I am a Full-Stack Developer with a strong foundation in web development and cybersecurity. I have hands-on experience with front-end and back-end technologies, including Vue.js, Node.js, MySQL, and Python. My background in Applied Mathematics enhances my analytical thinking, allowing me to approach challenges with a structured and logical mindset.
+              </p>
+              <br>
+              <p>Passionate about innovation and real-time data processing, I am eager to contribute impactful solutions through technology. I thrive in collaborative environments and am always keen to learn and grow as a developer.</p>
+              <br>
+              <p>
+                My goal is to grow as a developer and contribute to innovative solutions in the tech industry.
+              </p>
+              <br>
+
             </h5>
           </div>
           <br>

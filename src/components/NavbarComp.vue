@@ -92,7 +92,7 @@ export default {
 
 <style scoped>
 .navbar {
-  /* position: fixed;*/
+  /* position: fixed; */
   width: 100%;
   margin-top: 10px;
   transition: background-color 0.3s;

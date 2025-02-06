@@ -13,16 +13,20 @@
             <h5 class="card-text">
               <p>Hello! I'm Yolanda Matiwane, 23, an aspiring developer from Langa with a passion for coding and problem-solving.</p>
               
-              <p>I discovered my love for programming in 2020 during a physics class where I learned visual Python. Since then, I've been captivated by the process of transforming ideas into functional applications. I enjoy tackling challenges and constantly seek to expand my skills.</p>
-              
               <p>
-                I am a Full-Stack Developer with a strong foundation in web development and cybersecurity. I have hands-on experience with front-end and back-end technologies, including Vue.js, Node.js, MySQL, and Python. My background in Applied Mathematics enhances my analytical thinking, allowing me to approach challenges with a structured and logical mindset.
+                My journey into programming started in 2020 during a physics class when I was introduced to Visual Python—and I was instantly hooked! There was something thrilling about turning abstract concepts into functional applications, and I’ve been chasing that excitement ever since. I love tackling challenges, refining my skills, and continuously learning new things.
               </p>
               
-              <p>Passionate about innovation and real-time data processing, I am eager to contribute impactful solutions through technology. I thrive in collaborative environments and am always keen to learn and grow as a developer.</p>
+              <p>
+                As a Full-Stack Developer, I have a solid foundation in web development. I’ve worked with front-end and back-end technologies like Vue.js, Node.js, MySQL, and Python, and my background in Applied Mathematics sharpens my analytical thinking, helping me break down complex problems into structured solutions.
+              </p>
               
               <p>
-                My goal is to grow as a developer and contribute to innovative solutions in the tech industry.
+                I’m especially passionate about innovation, real-time data processing, and using technology to build impactful solutions. Whether working solo or collaborating with a team, I thrive in dynamic environments that push me to grow as a developer.
+              </p>
+              <p>Outside of coding, I’m naturally curious and love exploring new ideas. Reading, watching movies, and diving into different series fuel my creativity, allowing me to step into unknown worlds and expand my imagination. I also enjoy trying out new things, spending time at the beach, and making memories with friends and family.</p>
+              <p>
+                My goal? To keep learning, keep building, and contribute to game-changing solutions in the tech industry.
               </p>
               
 

@@ -118,6 +118,7 @@
   </script>
   
   <style scoped>
+
     img{
       width:50px;
       height: 50px;
@@ -131,6 +132,7 @@
     #contactsMainDiv{
       font-family: "Bangers";
       text-align: center;
+      margin: 100px;
       /* height: 80vh; */
     }
     h2{
@@ -158,6 +160,9 @@
     }
       /* For small screens (max-width: 768px) */
       @media only screen and (max-width: 768px) {
+        #contactsMainDiv{
+          margin: 30px;
+        }
       .formcarry-container {
         width: 90%;
         margin-left: 20px;
@@ -194,5 +199,6 @@
       button {
         width: 50%;
       }
+
     }
   </style>

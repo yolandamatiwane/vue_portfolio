@@ -125,7 +125,9 @@ export default {
     display: flex;
     justify-content: space-between;
     margin-left: 30px;
-    margin-top: 0px;
+    margin-top: 80px;
+    align-content: center;
+    /* margin: auto; */
     min-height: 400px;
     width: 95%;
     color: rgba(20, 0, 109, 0.705);

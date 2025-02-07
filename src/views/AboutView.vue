@@ -6,10 +6,10 @@
     <div class="card">
       <div class="container text-center">
         <div class="row" id="about">
-          <div class="col-sm-4 lg-12" data-aos="fade-right">
+          <div class="col-sm-4 lg-12" data-aos="fade-right" data-aos-duration="2000" data-aos-easing="ease-in-out">
             <img src="https://yolandamatiwane.github.io/vueProjectImages/20240422_122336.jpg">
           </div>
-          <div class="col-sm-8 lg-12" data-aos="fade-left">
+          <div class="col-sm-8 lg-12" data-aos="fade-left" data-aos-duration="2000" data-aos-easing="ease-in-out">
             <h5 class="card-text">
               <p>Hello! I'm Yolanda Matiwane, 23, an aspiring developer from Langa with a passion for coding and problem-solving.</p>
               
@@ -36,7 +36,7 @@
           <br>
         <div class="row" id="skillDiv">
           <h3>Skills:</h3>
-            <div class="col-sm-6 col-12" id="skill" data-aos="fade-up-right"> 
+            <div class="col-sm-6 col-12" id="skill" data-aos="fade-up-right" data-aos-duration="2000" data-aos-easing="ease-in-out"> 
                     <h4>Coding Skills</h4>
                     <div v-for="skill in skillsData" :key="skill.name" >
                         <h5>
@@ -44,7 +44,7 @@
                         </h5>  
                     </div>
             </div>
-            <div class="col-sm-6 col-12" id="skill" data-aos="fade-up-left">
+            <div class="col-sm-6 col-12" id="skill" data-aos="fade-up-left" data-aos-duration="2000" data-aos-easing="ease-in-out">
                     <h4>Soft Skills</h4>
                     <h5>
                         <span>></span> Problem-Solving and Critical Thinking
@@ -97,10 +97,7 @@ export default {
     width:250px;
     height:250px;
     border-radius:50%;
-    /* margin: auto; */
-    /* margin-left:600px; */
-    box-shadow: 4px 4px 2px black;
-    /* border: 4px solid rgba(153, 116, 150, 0.3); */
+    box-shadow: 0 15px 25px #670652;
   }
   .col-sm-8 {
     /* box-shadow: 4px 4px 2px white; */
@@ -108,6 +105,7 @@ export default {
     background-color: #bb7aad;
     border-radius: 10px;
     align-items: center;
+    box-shadow: 0 15px 25px #670652;
     /* color: white; */
   }
   .card-text{
@@ -141,6 +139,7 @@ export default {
     border-radius: 10px;
     width:35%;
     /* margin-left: 100px; */
+    box-shadow: 0 15px 25px #670652;
   }
   #skillDiv{
     margin-top: 30px;
@@ -183,6 +182,9 @@ export default {
     }
     h5{
       font-size: smaller;
+    }
+    img{
+      margin-bottom: 10px;
     }
   }
 </style>

@@ -122,7 +122,8 @@ export default {
         width: 30%;
         border-radius: 10px;
         padding: 55px ;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
+        box-shadow: 0 15px 25px #670652;
     }
    .card {
         background-color: rgb(204, 192, 255);

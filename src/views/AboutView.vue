@@ -5,11 +5,11 @@
     </h1> 
     <div class="card">
       <div class="container text-center">
-        <div class="row">
-          <div class="col-sm-4 lg-12">
+        <div class="row" id="about">
+          <div class="col-sm-4 lg-12" data-aos="fade-right">
             <img src="https://yolandamatiwane.github.io/vueProjectImages/20240422_122336.jpg">
           </div>
-          <div class="col-sm-8 lg-12">
+          <div class="col-sm-8 lg-12" data-aos="fade-left">
             <h5 class="card-text">
               <p>Hello! I'm Yolanda Matiwane, 23, an aspiring developer from Langa with a passion for coding and problem-solving.</p>
               
@@ -32,18 +32,19 @@
 
             </h5>
           </div>
+        </div>
           <br>
-          <div class="row" id="skillDiv">
-            <h3>Skills:</h3>
-                <div class="col-sm-6 col-12" id="skill" data-aos="fade-up-right"> 
+        <div class="row" id="skillDiv">
+          <h3>Skills:</h3>
+            <div class="col-sm-6 col-12" id="skill" data-aos="fade-up-right"> 
                     <h4>Coding Skills</h4>
                     <div v-for="skill in skillsData" :key="skill.name" >
                         <h5>
                             <span>></span> {{ skill.name }}
                         </h5>  
                     </div>
-                </div>
-                <div class="col-sm-6 col-12" id="skill" data-aos="fade-up-left">
+            </div>
+            <div class="col-sm-6 col-12" id="skill" data-aos="fade-up-left">
                     <h4>Soft Skills</h4>
                     <h5>
                         <span>></span> Problem-Solving and Critical Thinking
@@ -63,9 +64,9 @@
                     <h5>
                         <span>></span> Networking
                     </h5>
-                </div>
             </div>
         </div>
+        
       </div>
     </div>
   </div>
@@ -83,17 +84,28 @@ export default {
 }
 </script>
 <style scoped>
+  #about{
+    margin: auto;
+  }
+  .col-sm-4{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+  }
   img{
     width:250px;
     height:250px;
     border-radius:50%;
+    /* margin: auto; */
     /* margin-left:600px; */
     box-shadow: 4px 4px 2px black;
     /* border: 4px solid rgba(153, 116, 150, 0.3); */
   }
   .col-sm-8 {
     /* box-shadow: 4px 4px 2px white; */
-    background-color: rgba(255, 255, 255, 0);
+    /* background-color: rgba(255, 255, 255, 0); */
+    background-color: #bb7aad;
     border-radius: 10px;
     align-items: center;
     /* color: white; */
@@ -151,7 +163,7 @@ export default {
     img{
       width: 70%;
       height: 200px;
-      margin: auto;
+      /* margin: auto; */
 
     }
     .card{

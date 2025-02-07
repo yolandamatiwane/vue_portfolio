@@ -6,10 +6,12 @@
             <h3>Work Experience:</h3>
                 <div class="flex-container2">
                     <div v-for="work in workExpData" :key="work.description" id="eduDivs">
-                        <img :src="work.img" id="eduImg"/>
-                    <h4><span>></span>  {{ work.year }}</h4>
-                    <h5><label>Place of Employment:</label> {{ work.placeOfWork }}</h5>
-                    <h5><label></label> {{ work.description }}</h5>
+                        <!-- <img :src="work.img" id="eduImg"/> -->
+                        <div id="info">
+                            <h4><span>></span>  {{ work.year }}</h4>
+                            <h5><label>Place of Employment:</label> {{ work.placeOfWork }}</h5>
+                            <h5><label></label> {{ work.description }}</h5>
+                        </div>
                 </div>
             </div>
         </div>
@@ -27,10 +29,12 @@
             <h3>Education: </h3>
            <div class="flex-container mt-2">
                 <div v-for="edu in educationData" :key="edu.description" id="eduDivs">
-                    <img :src="edu.img" id="eduImg"/>
-                    <h4><span>></span> {{ edu.year }}</h4>
-                    <h5><label>Institution:</label>  {{ edu.institution }}</h5>
-                    <h5>{{edu.description}}</h5>
+                    <!-- <img :src="edu.img" id="eduImg"/> -->
+                    <div>
+                        <h4><span>></span> {{ edu.year }}</h4>
+                        <h5><label>Institution:</label>  {{ edu.institution }}</h5>
+                        <h5>{{edu.description}}</h5>
+                    </div>
 
                 </div> 
            </div> 
@@ -62,7 +66,11 @@ export default {
         width: 120px;
         animation: bounce 2s infinite ease-in-out;
     }
-
+    /* #info{
+        background-color: #bb7aad;
+        border-radius: 10px;
+        padding: 55px ;
+    } */
     /* #badgeDivs {
         display: flex;
         flex-wrap: wrap;
@@ -83,6 +91,8 @@ export default {
     #eduImg{
         width: 100px;
         height: 70px;
+        border: 5px solid #bb7aad;
+        border-radius: 50%;
     }
     #img{
         width: 60px;
@@ -102,7 +112,7 @@ export default {
         width: 35%;
         margin-top: 10px;
         margin-bottom: 20px;
-        background-color: #bb7aad;
+        /* background-color: #bb7aad; */
         /* margin-left: 150px; */
         border-radius: 10px;
         padding: 55px ;
